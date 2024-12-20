@@ -1,7 +1,11 @@
 name: Run tests
 
 on:
-  push
+  push:
+   branches:
+        - main
+  schedule:
+   - cron: '22 20 * * *' # Запуск в 22:20 каждый день
 
 jobs:
   run_tests:
